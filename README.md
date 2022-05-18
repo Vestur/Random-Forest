@@ -1,0 +1,8 @@
+# Decision-Tree-From-Scratch:
+Objective: Create Random Forest Decision Tree From Scratch
+
+# Libraries:
+Numpy, Pandas, Matplotlob, and Math were used to improve the speed and readability of arrays by forming them as np.ndarrays and using pandas to load in csv data.
+
+# Notes:
+The random forest can handle both continous and categorical variables. The code will ask if all attributes are continous or categorical and if not all one type then it will ask you the type of each attribute, attribute by attribute. Currently I didn't implement an easy way to change the column which refers to the class variable so it is currently hard coded in the main function. To use the dataset you want just make sure the datasets are in the datasets folder and uncomment the appropriate lines of code. By default it runs the random forest on the votes data (assuming its in datasets folder). It will first ask if all attributes are continous (cont) answer 'no', then it will ask if all attributes are categorical, answer 'yes'. The code will output graphs in order (close one graph to open the next) and print to the terminal the metrics output for each number of trees. To change the criterion from entropy to gini simply ctr-f for "search for criterion" and change that criterion value in make_subtree to 1 (gini) from 0 (entropy). When stratifying and making folds I use 10 folds by default, but that value can be changed in the plots function (the num_folds variable). To solve any overflow issues I will sometimes ignore a few rows to make the folds even. However, it is never more than a few rows and including an uneven number in one fold in experiments didn't change results, just made the code a bit more complicated.
